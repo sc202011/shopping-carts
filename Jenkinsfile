@@ -19,7 +19,6 @@ pipeline {
       steps {
         echo 'this is the package job'
         sh 'mvn package'
-        archiveArtifacts '**/target/*.jar'
       }
     }
 
