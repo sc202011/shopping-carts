@@ -23,6 +23,12 @@ pipeline {
       }
     }
 
+    stage('Archive') {
+      steps {
+        archiveArtifacts '**/target/*.jar'
+      }
+    }
+
   }
   tools {
     maven 'maven'
