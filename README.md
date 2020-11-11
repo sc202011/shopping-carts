@@ -11,7 +11,7 @@ Checkout the API Spec [here](http://microservices-demo.github.io/api/index?url=h
 
 # Creating a dev environment
 
-Platform : Ubuntu 18.04.00  
+Platform : Ubuntu 18.04.01  
 
 Setup Mongo DB
 ```
