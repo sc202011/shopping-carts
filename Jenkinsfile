@@ -43,7 +43,11 @@ pipeline {
     stage('Build and Publish') {
       steps {
         script {
-          docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') { def dockerImage = docker.build("sc202011/shopping-carts:v${env.BUILD_ID}", "./") dockerImage.push() dockerImage.push("latest") }
+          docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
+            def dockerImage = docker.build("sc202011/shopping-carts:v${env.BUILD_ID}", "./")
+            dockerImage.push()
+            dockerImage.push("latest")
+          }
         }
 
       }
