@@ -40,18 +40,6 @@ pipeline {
       }
     }
 
-    stage('Archive') {
-      agent {
-        docker {
-          image 'lagairogo/carts-maven'
-        }
-
-      }
-      steps {
-        archiveArtifacts '**/target/*.jar'
-      }
-    }
-
     stage('Build and Publish') {
       steps {
         script {
